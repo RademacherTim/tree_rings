@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#========================================================================================#\n# This script reads the raw tree ring width data from the warm ants experiment as measured \n# in ImageJ using the ObjectJ plugin and TreeRings-13 macros. \n#\n# All cores are red oaks (Quercus Rubra) measured before the start of the growing season\n# in 2017.\n#\n#----------------------------------------------------------------------------------------#\nlibrary ('RColorBrewer')\n\ncolours <- c (brewer.pal (name = 'YlOrRd', n = 9), brewer.pal (name = 'PiYG', n = 11) [8], brewer.pal (name = 'BrBG', n = 11) [8]) \nraw <- read.csv ('../data/warm_ants_results_table.csv')\nnames (raw) <- c ('Year','AA01','H02','H09','AA06?','AA02','H01','AA05','AA04','AA03','AA09','AA08','AA07','H03','H04.2','H04','H05','H06','H07','H08','H10','H12','H11')\nstr (raw)\ntreatment <- c ()\ndata <- cbind (raw$Year,  raw$H01,  raw$H02,  raw$H03,     raw$H04,  raw$H05,   raw$H06,  \n               raw$H07,   raw$H08,  raw$H09,  raw$H10,     raw$H11,  raw$H12,  raw$AA01, \n               raw$AA02, raw$AA03, raw$AA04, raw$AA05, raw$`AA06?`, raw$AA07,  raw$AA08, \n               raw$AA09)\ncolnames (data) <- c ('Year','H01','H02','H03','H04','H05','H06','H07','H08','H09','H10','H11','H12','AA01','AA02','AA03','AA04','AA05','AA06','AA07','AA08','AA09')\n\nplot (x   = data [, 1], # year\n      y   = data [, 2], # H01\n      typ = 'l',\n      col = 'white')\nsapply (seq (1920, 2020, by = 10), function (x) abline (v = x, lwd  = 0.5, col = 'grey'))\n#sapply (2:13, function (x) lines (x = data [, 1], y = data [, x], lwd = 0.5)) # plot all heated trees\nlines (x = data [, 1], y = data [,  2], lwd = 2, col = colours [1])\nlines (x = data [, 1], y = data [,  3], lwd = 2, col = colours [2])\nlines (x = data [, 1], y = data [,  4], lwd = 2, col = colours [3])\nlines (x = data [, 1], y = data [,  5], lwd = 2, col = colours [4])\nlines (x = data [, 1], y = data [,  6], lwd = 2, col = colours [5])\nlines (x = data [, 1], y = data [,  7], lwd = 2, col = colours [6])\nlines (x = data [, 1], y = data [,  8], lwd = 2, col = colours [7])\nlines (x = data [, 1], y = data [,  9], lwd = 2, col = colours [8])\nlines (x = data [, 1], y = data [, 10], lwd = 2, col = colours [9])\nlines (x = data [, 1], y = data [, 11], lwd = 2, col = colours [10])\nlines (x = data [, 1], y = data [, 12], lwd = 2, col = colours [10])\nlines (x = data [, 1], y = data [, 13], lwd = 2, col = colours [10])\nrect (ybottom = 0, xleft = 2009, ytop = 0.30, xright = 2015, col = '#901C3B33', lty = 0)\n#========================================================================================#",
+    "created" : 1494018516788.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "913927636",
+    "id" : "84A8494",
+    "lastKnownWriteTime" : 1494022504,
+    "last_content_update" : 1494022504459,
+    "path" : "~/Desktop/tree_rings/code/p_RW_warm_ants.R",
+    "project_path" : "p_RW_warm_ants.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
