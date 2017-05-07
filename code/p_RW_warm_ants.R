@@ -75,11 +75,11 @@ sapply (seq (1920, 2016, by = 10), function (x) abline (v = x, lwd  = 0.5, col =
 #sapply (2:13, function (x) lines (x = data [, 1], y = data [, x], lwd = 0.5)) # plot all heated trees
 lines (x = data [, 1], y = data [,  2], lwd = 2, col = colours [1])
 lines (x = data [, 1], y = data [,  3], lwd = 2, col = colours [2])
-lines (x = data [, 1], y = data [,  4], lwd = 2, col = colours [3]) # Should the before last ring be wider?
-lines (x = data [, 1], y = data [,  5], lwd = 2, col = colours [4]) # Missing a ring around the year 2000?
-lines (x = data [, 1], y = data [,  6], lwd = 2, col = colours [5]) # Check particularly year 2000 and the last decade?
-lines (x = data [, 1], y = data [,  7], lwd = 2, col = colours [6]) # A year too much between 1990 and 1996? Also check 2006 and 2011
-lines (x = data [, 1], y = data [,  8], lwd = 2, col = colours [7]) # Check last ring, maybe a bit big? Check 1999 - 2010
+lines (x = data [, 1], y = data [,  4], lwd = 2, col = colours [3])
+lines (x = data [, 1], y = data [,  5], lwd = 2, col = colours [4])
+lines (x = data [, 1], y = data [,  6], lwd = 2, col = colours [5]) 
+lines (x = data [, 1], y = data [,  7], lwd = 2, col = colours [6]) 
+lines (x = data [, 1], y = data [,  8], lwd = 2, col = colours [7])
 lines (x = data [, 1], y = data [,  9], lwd = 2, col = colours [8])
 lines (x = data [, 1], y = data [, 10], lwd = 2, col = colours [9]) # Awfully off, except for 1998
 lines (x = data [, 1], y = data [, 11], lwd = 2, col = colours [9])
